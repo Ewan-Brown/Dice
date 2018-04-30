@@ -36,7 +36,7 @@ public class LetsDoItBitch extends JPanel implements MouseListener{
 			counts[i] = 0;
 			BufferedImage img = null;
 			try {
-			    img = ImageIO.read(new File("C:\\Users\\Ewan\\Downloads\\Die"+(i+1) + ".png"));
+			    img = ImageIO.read(new File("resource\\images\\Die"+(i+1) + ".png"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -80,7 +80,7 @@ public class LetsDoItBitch extends JPanel implements MouseListener{
 	public void paint(Graphics g) {
 		super.paint(g);
 		Graphics2D g2 = (Graphics2D) g;
-		g2.drawLine(0, DISPLAY_HEIGHT + 2, this.getWidth(),DISPLAY_HEIGHT + 2);
+		g2.drawLine(0, DISPLAY_HEIGHT + 4, this.getWidth(),DISPLAY_HEIGHT + 4);
 		for (Die d : dice) {
 			g2.fillRect((int) (d.x - d.size), (int) (d.y -  d.size), d.size, d.size);
 			g2.drawImage(dieSides[d.side],(int) (d.x - d.size), (int) (d.y -  d.size),null);
